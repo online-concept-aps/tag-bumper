@@ -5,7 +5,7 @@ inputs:
     description: "Username"
     required: true
 outputs:
-  myOutput:
+  new-tag:
     description: "Output from the action"
 runs:
   using: "docker"
