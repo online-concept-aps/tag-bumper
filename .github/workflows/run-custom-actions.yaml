@@ -11,10 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Custom Composite Actions
-        uses: ./sh
-        with:
-          username: "John Doe"
       - name: Custom Javascript Actions
         id: tag-bumper
         uses: ./javascript
