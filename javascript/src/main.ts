@@ -7,7 +7,7 @@ const version = "1.0.0";
 
 
 var prefix = core.getInput( 'prefix-tag' );
-var token = core.getInput( 'github-token' );
+var token =  process.env.GITHUB_TOKEN;
 
 
 console.log(`The event payload: ${payload}`);
