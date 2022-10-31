@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Custom Composite Actions"
+      - name: Custom Composite Actions
         uses: ./sh
-      - name: Custom Javascript Actions"
+      - name: Custom Javascript Actions
         uses: ./javascript    
-      - name: Custom Container Actions"
-        uses: ./container"            
+      - name: Custom Container Actions
+        uses: ./container"           
