@@ -16,6 +16,8 @@ jobs:
         with:
           username: "John Doe"
       - name: Custom Javascript Actions
-        uses: ./javascript    
+        uses: ./javascript
+        with:
+          username: "John Doe"    
       - name: Custom Container Actions
         uses: ./container           
