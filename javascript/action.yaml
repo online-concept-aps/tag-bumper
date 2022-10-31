@@ -1,9 +1,15 @@
 name: "Custom Github Actions"
 description: "Quick demo javascript action"
 inputs:
-  username:
-    description: "Username"
+  github-token:
+    description: "Token"
     required: true
+  prefix-tag:
+    description: "Service name as prefix for tag"
+    required: true
+outputs:
+  new-tag:
+    description: "Output from the action"
 runs:
   using: "node16"
   main: "main.js"

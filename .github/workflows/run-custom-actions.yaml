@@ -19,9 +19,5 @@ jobs:
         uses: ./javascript
         with:
           username: "John Doe"    
-      - name: Custom Container Actions
-        uses: ./container           
-        with:
-          username: "John Doe"
       - name: Print value
         run: echo "The value is ${{ steps.custom-actions-job.outputs.myOutput }}"
