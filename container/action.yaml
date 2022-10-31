@@ -4,6 +4,9 @@ inputs:
   username:
     description: "Username"
     required: true
+outputs:
+  myOutput:
+    description: "Output from the action"
 runs:
   using: "docker"
   image: "Dockerfile"

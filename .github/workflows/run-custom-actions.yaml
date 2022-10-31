@@ -23,3 +23,5 @@ jobs:
         uses: ./container           
         with:
           username: "John Doe"
+      - name: Print value
+        run: echo "The value is ${{ steps.custom-actions-job.outputs.myOutput }}"
