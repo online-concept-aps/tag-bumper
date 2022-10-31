@@ -6,4 +6,4 @@ var prefix = core.getInput( 'prefix-tag' );
 var token = core.getInput( 'github-token' );
 console.log(`The event payload: ${payload}`);
 console.log(`Hello ${prefix}`)
-console.log(`::set-output name=new-tag::${prefix +"-"+ version}`)
+console.log(`{new-tag}={test}`)
