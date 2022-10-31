@@ -1,5 +1,9 @@
 name: "Custom Github Actions"
 description: "Quick demo container action"
+inputs:
+  username:
+    description: "Username"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile" 
