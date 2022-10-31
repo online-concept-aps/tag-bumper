@@ -1,0 +1,15 @@
+name: "Run Custom Actions"
+on:
+  #Manual trigger
+  workflow_dispatch:
+  #run changes
+  push:
+
+jobs:
+  custom-actions-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Custom Composite Actions"
+        uses: ./sh     
