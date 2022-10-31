@@ -21,3 +21,5 @@ jobs:
           username: "John Doe"    
       - name: Custom Container Actions
         uses: ./container           
+        with:
+          username: "John Doe"
