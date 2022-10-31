@@ -1,2 +1,2 @@
 #!/bin/bash
-dotnet /app/Container.dll $@
+dotnet /app/Container.dll @($1)
