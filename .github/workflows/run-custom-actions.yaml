@@ -21,4 +21,4 @@ jobs:
           prefix-tag: "customer"
           github-token: ${{ secrets.GITHUB_TOKEN }}    
       - name: Print value
-        run: echo "The value is ${{ steps.custom-actions-job.outputs.myOutput }}"
+        run: echo "The value is ${{ steps.custom-actions-job.outputs.new-tag }}"
