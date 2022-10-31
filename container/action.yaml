@@ -1,0 +1,7 @@
+name: "Custom Github Actions"
+description: "Quick demo javascript action"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  
+    

@@ -14,4 +14,6 @@ jobs:
       - name: Custom Composite Actions"
         uses: ./sh
       - name: Custom Javascript Actions"
-        uses: ./javascript     
+        uses: ./javascript    
+      - name: Custom Container Actions"
+        uses: ./container"            
