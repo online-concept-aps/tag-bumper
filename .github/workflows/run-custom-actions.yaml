@@ -18,6 +18,7 @@ jobs:
       - name: Custom Javascript Actions
         uses: ./javascript
         with:
-          username: "John Doe"    
+          prefix-tag: "customer"
+          github-token: ${{ secrets.GITHUB_TOKEN }}    
       - name: Print value
         run: echo "The value is ${{ steps.custom-actions-job.outputs.myOutput }}"
