@@ -12,4 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Custom Composite Actions"
-        uses: ./sh     
+        uses: ./sh
+      - name: Custom Javascript Actions"
+        uses: ./javascript     
