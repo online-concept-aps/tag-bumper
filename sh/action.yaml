@@ -8,5 +8,4 @@ runs:
   using: "composite"
   steps:
     - run: echo "Hello ${{ inputs.username }}"
-      shell: bash
-    
+      shell: bash    

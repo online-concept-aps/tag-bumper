@@ -1,4 +1,4 @@
-const  core = required( '@actions/core' );
+const  core = require( '@actions/core' );
 
 var username = core.getInput( 'username' );
 
