@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Custom Composite Actions
         uses: ./sh
+        with:
+          username: "John Doe"
       - name: Custom Javascript Actions
         uses: ./javascript    
       - name: Custom Container Actions
