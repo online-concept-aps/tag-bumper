@@ -1,2 +1,2 @@
 #!/bin/bash
-dotnet /app/Container.dll --input-parameter "$username"
+dotnet /app/Container.dll --username "$username"
