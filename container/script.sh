@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello $1"
+dotnet /app/Container.dll $1
