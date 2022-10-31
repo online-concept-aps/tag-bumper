@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GHdTKAvXbOt96Tkn4WZRu5LdstZVvbUkRweDAfM9WvC4wep7agFe6ziznNr6T8QHmHVeszEKnyeiycGUXDwX/w==",
+  "dgSpecHash": "eh4vgG/+ZwEHQr3MpsvHNjPY/8PJucyflhIBRT3MoMvvi1gEaf4n6eyFOa9qQapq/M0sF2wTb62qxV2DK+W0dA==",
   "success": true,
-  "projectFilePath": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\src.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\Container.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\malka\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.10\\microsoft.netcore.app.ref.6.0.10.nupkg.sha512",
+    "C:\\Users\\malka\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.10\\microsoft.windowsdesktop.app.ref.6.0.10.nupkg.sha512",
+    "C:\\Users\\malka\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.10\\microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512",
+    "C:\\Users\\malka\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.10\\microsoft.netcore.app.host.win-x64.6.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net6.0": []
   },
   "packageFolders": {
     "C:\\Users\\malka\\.nuget\\packages\\": {},
@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\src.csproj",
-      "projectName": "src",
-      "projectPath": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\src.csproj",
+      "projectUniqueName": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\Container.csproj",
+      "projectName": "Container",
+      "projectPath": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\Container.csproj",
       "packagesPath": "C:\\Users\\malka\\.nuget\\packages\\",
       "outputPath": "C:\\programmering\\github actions\\tagbumper\\tag-bumper\\container\\src\\obj\\",
       "projectStyle": "PackageReference",
@@ -29,7 +29,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -38,8 +38,8 @@
         "https://nuget.pkg.github.com/gls-denmark/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -50,8 +50,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
@@ -63,6 +63,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.10, 6.0.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
