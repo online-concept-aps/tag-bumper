@@ -22,4 +22,4 @@ jobs:
           prefix-tag: "customer"
           github-token: ${{ secrets.GITHUB_TOKEN }}    
       - name: Print value
-        run: echo "The value is ${{ steps.custom-actions-job.tag-bumper.outputs.new-tag }}"
+        run: echo "The value is ${{ steps.tag-bumper.outputs.new-tag }}"
