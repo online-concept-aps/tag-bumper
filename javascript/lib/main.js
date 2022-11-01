@@ -22,24 +22,25 @@ async function run(){
     if(tags){
         tags.data.map(x=> JSON.stringify(x))
     }
-   
+    //await CreateTag(github.context.repo,version, sha)
 
 
+
+
+}
+async function CreateTag(repo, version, sha){
     const tag_resp = await client.rest.git.createTag({
-    ...github.context.repo,
-    tag: version,
-    message:version,
-    object: github.context.sha,
-    type: 'commit'
+        ...repo,
+        tag: version,
+        message:version,
+        object: sha,
+        type: 'commit'
     })
-    console.log("tag resp:" +tag_resp);
     const ref_rsp = await client.rest.git.createRef({
-        ...github.context.repo,
+        ...repo,
         ref: `refs/tags/${version}`,
         sha: tag_resp.data.sha
     })
-    console.log("ref reps: " +ref_rsp);
-
 }
 try {
     run()
