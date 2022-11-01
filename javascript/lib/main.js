@@ -27,4 +27,12 @@ async function run(){
     })
     console.log(tag_resp);
 }
-run();
+try {
+    run()
+} catch (error) {
+    if (error instanceof Error) {
+        core.setFailed(`CREATE_TAG_ERROR:${error.message}`)
+    } else {
+        core.setFailed(`CREATE_TAG_ERR:${error}`)
+    }
+}
