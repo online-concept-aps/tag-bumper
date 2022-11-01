@@ -5,15 +5,15 @@ const octokit = require('@octokit/rest');
 async function run(){
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     const repository = github.context.payload.repository;
-    console.log("Payload: " + payload);
+    //console.log("Payload: " + payload);
     const version = "1.0.0";
-    console.log("version: " + version);
+    //console.log("version: " + version);
     var token =  process.env.GITHUB_TOKEN;
-    console.log("token: " +token)
+    //console.log("token: " +token)
     const { GITHUB_REF, GITHUB_SHA } = process.env;
-    console.log("GITHUB_REF: " +GITHUB_REF)
-    console.log("GITHUB_SHA: " +GITHUB_SHA)
-    console.log(JSON.stringify(github.context.repo))
+    //console.log("GITHUB_REF: " +GITHUB_REF)
+    //console.log("GITHUB_SHA: " +GITHUB_SHA)
+    //console.log(JSON.stringify(github.context.repo))
     var client = github.getOctokit(token);
 
 
@@ -25,13 +25,14 @@ async function run(){
     object: github.context.sha,
     type: 'commit'
     })
-    console.log(tag_resp);
+    console.log("tag resp:" +tag_resp);
     const ref_rsp = await octokit.rest.git.createRef({
         ...github.context.repo,
         ref: `refs/tags/${version}`,
         sha: tag_rsp.data.sha
     })
-    
+    console.log("ref reps: " +ref_rsp);
+
 }
 try {
     run()
