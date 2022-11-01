@@ -17,8 +17,7 @@ var client = new octokit.Octokit({
     auth: token
 });
 client.git.createTag({
-    owner: repository.owner.name,
-    repo: repository.name,
+    ...github.context,
     tag: version,
     message:version,
     object: GITHUB_SHA,
