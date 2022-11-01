@@ -24,7 +24,7 @@ async function run(){
 
 
     const currentBranch = getBranchFromRef(GITHUB_REF);
-    await createTag("test-1.0.0", commitSha);
+    await createTag("test-1.0.0", GITHUB_SHA!.toString());
 
     console.log("anything" ,GITHUB_REF,GITHUB_SHA)
     console.log(`The event payload: ${payload}`);

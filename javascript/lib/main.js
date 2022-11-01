@@ -44,7 +44,7 @@ function run() {
             return;
         }
         const currentBranch = utils_1.getBranchFromRef(GITHUB_REF);
-        yield utils_1.createTag("test-1.0.0", commitSha);
+        yield utils_1.createTag("test-1.0.0", GITHUB_SHA.toString());
         console.log("anything", GITHUB_REF, GITHUB_SHA);
         console.log(`The event payload: ${payload}`);
         core.setOutput("new-tag", version);
