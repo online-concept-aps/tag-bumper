@@ -8,7 +8,7 @@ async function run(){
     const MAJOR = 0;                                 // don't bump MAJOR
     const MINOR = 0;                                 // bump MINOR
     const PATCH = 1;
-    const masks = [MAJOR, MINOR, PATCH];
+    const mask = [MAJOR, MINOR, PATCH];
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     const repository = github.context.payload.repository;
     const prefix = core.getInput("prefix-tag");
