@@ -39,7 +39,7 @@ async function run(){
         const bumpedVersion = semver.inc(latestTag);
         const tag = `${prefix}-${bumpedVersion}`;
         await CreateTag(github.context.repo,tag, github.context.sha)
-        core.setOutput("new-tag",tag);
+        core.setOutput("new-tag",tag); 
     }
 }
 async function CreateTag(repo, version, sha){
