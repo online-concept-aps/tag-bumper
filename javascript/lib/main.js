@@ -24,7 +24,7 @@ async function run(){
     const tags = data.filter(x=> x.name.includes(prefix))
     if(tags.length === 0){
         const tag = `${prefix}-${defaultVersion}`;
-        await CreateTag(github.context.repo,tag, sha)
+        await CreateTag(github.context.repo,tag, github.context.sha)
         core.setOutput("new-tag",tag);
     }
     else{
@@ -38,7 +38,7 @@ async function run(){
         })
         const bumpedVersion = semver.inc(latestTag);
         const tag = `${prefix}-${bumpedVersion}`;
-        await CreateTag(github.context.repo,tag, sha)
+        await CreateTag(github.context.repo,tag, github.context.sha)
         core.setOutput("new-tag",tag);
     }
 }
