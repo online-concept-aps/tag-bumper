@@ -45,7 +45,7 @@ async function run(){
                 latestTag = semver.clean(listVer);
             }
         })
-        console.log(latestTag);
+        console.log(latestTag); 
         const bumpedVersion = bumpVersion(mask,latestTag);
 
         const tag = `${prefix}-${bumpedVersion}`;
