@@ -19,7 +19,7 @@ async function run(){
    const {data} =  await client.rest.repos.listTags({
         ...github.context.repo
     })
-    console.log(data)
+    console.log(data.filter(x=> x.includes('test'))[0])
     //await CreateTag(github.context.repo,version, sha)
 
 
