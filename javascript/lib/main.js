@@ -43,6 +43,8 @@ async function run(){
     }
 }
 async function CreateTag(repo, version, sha){
+    var token =  process.env.GITHUB_TOKEN;
+    var client = github.getOctokit(token);
     const tag_resp = await client.rest.git.createTag({
         ...repo,
         tag: version,
