@@ -20,7 +20,7 @@ async function run(){
         ...github.context.repo
     })
     if(tags){
-        tags.map(x=> JSON.stringify(x))
+        tags.data.map(x=> JSON.stringify(x))
     }
    
 
