@@ -21,6 +21,6 @@ client.git.createTag({
     repo: repository.name,
     tag: version,
     message:version,
-    object: GITHUB_SHA,
+    object: github.context.payload.commits[0].id,
     type: 'commit'
 })
