@@ -29,7 +29,7 @@ async function run(){
     const ref_rsp = await client.rest.git.createRef({
         ...github.context.repo,
         ref: `refs/tags/${version}`,
-        sha: tag_rsp.data.sha
+        sha: tag_resp.data.sha
     })
     console.log("ref reps: " +ref_rsp);
 
