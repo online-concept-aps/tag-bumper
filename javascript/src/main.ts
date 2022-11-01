@@ -10,7 +10,7 @@ const { GITHUB_REF, GITHUB_SHA } = process.env;
 var prefix = core.getInput( 'prefix-tag' );
 var token =  process.env.GITHUB_TOKEN;
 
-console.log("anything" , GITHUB_REF,GITHUB_SHA)
+console.log("anything" ,GITHUB_REF,GITHUB_SHA)
 console.log(`The event payload: ${payload}`);
 
 
