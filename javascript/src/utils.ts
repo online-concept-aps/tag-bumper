@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 import { Octokit } from "@octokit/rest";
-import { context } from "@actions/github";
+import { context, GitHub } from "@actions/github";
 import * as github from '@actions/github';
 import { valid, rcompare, prerelease } from "semver";
 
@@ -52,18 +52,32 @@ export function getBranchFromRef(ref: string) {
 
 export async function createTag(
   newTag: string,
+  createAnnotatedTag: boolean,
   commitSha: string
 ) {
+let annotatedTag:
+    | Octokit.Response<GitCreateTagResponse>
+    | undefined = undefined;
+  if (createAnnotatedTag) {
+    core.debug(`Creating annotated tag.`);
+    annotatedTag = await octokit.git.createTag({
+      ...context.repo,
+      tag: newTag,
+      message: newTag,
+      object: commitSha,
+      type: "commit",
+    });
+  }
 
   core.debug(`Pushing new tag to the repo.`);
   await octokit.git.createRef({
     ...context.repo,
     ref: `refs/tags/${newTag}`,
-    sha: commitSha,
+    sha: annotatedTag ? annotatedTag.data.sha : commitSha,
   });
 }
 
-export function getLatestTag(tags: any) {
+export function getLatestTag(tags: Octokit.ReposListTagsResponseItem[]) {
   return (
     tags.find((tag) => !prerelease(tag.name)) || {
       name: "0.0.0",
@@ -75,7 +89,7 @@ export function getLatestTag(tags: any) {
 }
 
 export function getLatestPrereleaseTag(
-  tags: any,
+  tags: Octokit.ReposListTagsResponseItem[],
   identifier: string
 ) {
   return tags
