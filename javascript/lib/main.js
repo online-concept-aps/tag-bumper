@@ -33,11 +33,11 @@ async function run(){
         console.log("latest tag: " + latestTag);
         tags.map(x=>{
             console.log("tagname: " + x.name)
-            const listVer = semver.clean(x.name.replace(`${prefix}-`));
+            const listVer = x.name.replace(`${prefix}-`,'');
             console.log("list-ver: " + listVer)
             console.log("latestTag-ver: " + latestTag)
             if(semver.gt(listVer,latestTag)){
-                latestTag = listVer;
+                latestTag = semver.clean(listVer);
             }
         })
         const bumpedVersion = semver.inc(latestTag);
