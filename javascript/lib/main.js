@@ -30,8 +30,11 @@ async function run(){
     else{
         let latestTag = defaultVersion;
         let second = null;
+        console.log("latest tag: " + latestTag);
         tags.map(x=>{
             const listVer = semver.clean(x.name);
+            console.log("list-ver: " + listVer)
+            console.log("latestTag-ver: " + latestTag)
             if(semver.gt(listVer,latestTag)){
                 latestTag = listVer;
             }
