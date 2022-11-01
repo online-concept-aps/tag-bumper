@@ -13,6 +13,7 @@ console.log("token: " +token)
 const { GITHUB_REF, GITHUB_SHA } = process.env;
 console.log("GITHUB_REF: " +GITHUB_REF)
 console.log("GITHUB_SHA: " +GITHUB_SHA)
+console.log(JSON.stringify(github.context.repo))
 var client = new octokit.Octokit({
     auth: token
 });
