@@ -17,7 +17,8 @@
     "@octokit/rest": "^19.0.5",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "semver": "^7.3.8"
+    "semver": "^7.3.8",
+    "semver-increment": "^1.0.1"
   },
   "devDependencies": {
     "@octokit/types": "^8.0.0",

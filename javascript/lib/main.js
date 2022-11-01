@@ -2,8 +2,13 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const octokit = require('@octokit/rest');
 const semver = require('semver');
+var bumpVersion = require('semver-increment');
 
 async function run(){
+    const MAJOR = 0;                                 // don't bump MAJOR
+    const MINOR = 0;                                 // bump MINOR
+    const PATCH = 1;
+    const masks = [MAJOR, MINOR, PATCH];
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     const repository = github.context.payload.repository;
     const prefix = core.getInput("prefix-tag");
@@ -41,7 +46,7 @@ async function run(){
             }
         })
         console.log(latestTag);
-        const bumpedVersion = semver.inc(latestTag,'','');
+        const bumpedVersion = bumpVersion(mask,latestTag);
 
         const tag = `${prefix}-${bumpedVersion}`;
         await CreateTag(github.context.repo,tag, github.context.sha)
