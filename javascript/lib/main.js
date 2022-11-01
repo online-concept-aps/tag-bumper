@@ -16,6 +16,11 @@ async function run(){
     //console.log(JSON.stringify(github.context.repo))
     var client = github.getOctokit(token);
 
+   const tags =  await client.rest.repos.listTags({
+        ...github.context.repo
+    })
+
+    console.log(JSON.stringify(tags));
 
 
     const tag_resp = await client.rest.git.createTag({
