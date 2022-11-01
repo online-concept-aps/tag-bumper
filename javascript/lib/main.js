@@ -19,8 +19,10 @@ async function run(){
    const tags =  await client.rest.repos.listTags({
         ...github.context.repo
     })
-
-    console.log(JSON.stringify(tags));
+    if(tags){
+        tags.map(x=> JSON.stringify(x))
+    }
+   
 
 
     const tag_resp = await client.rest.git.createTag({
