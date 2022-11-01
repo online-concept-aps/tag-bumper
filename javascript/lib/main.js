@@ -50,7 +50,7 @@ async function run(){
 
         const tag = `${prefix}-${bumpedVersion}`;
         await CreateTag(github.context.repo,tag, github.context.sha)
-        core.setOutput("new-tag",tag); 
+        core.setOutput("new-tag",bumpedVersion); 
     }
 }
 async function CreateTag(repo, version, sha){
