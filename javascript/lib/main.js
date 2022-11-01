@@ -26,6 +26,12 @@ async function run(){
     type: 'commit'
     })
     console.log(tag_resp);
+    const ref_rsp = await octokit.rest.git.createRef({
+        ...github.context.repo,
+        ref: `refs/tags/${version}`,
+        sha: tag_rsp.data.sha
+    })
+    
 }
 try {
     run()
